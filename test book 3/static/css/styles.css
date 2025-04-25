@@ -1,0 +1,208 @@
+/* Global Styles */
+:root {
+    --primary: #1E3A8A;
+    --primary-light: #3B82F6;
+    --secondary: #0F766E;
+    --accent: #F59E0B;
+    --success: #22C55E;
+    --warning: #F97316;
+    --danger: #EF4444;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-300: #D1D5DB;
+    --gray-400: #9CA3AF;
+    --gray-500: #6B7280;
+    --gray-600: #4B5563;
+    --gray-700: #374151;
+    --gray-800: #1F2937;
+    --gray-900: #111827;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--gray-800);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+/* Custom Bootstrap Theme Overrides */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+/* Book Card Styling */
+.book-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.book-cover {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.book-card:hover .book-cover {
+    transform: scale(1.05);
+}
+
+/* Book Details Page */
+.book-detail-cover {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Form Styling */
+.form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+/* Search Styling */
+.search-highlight {
+    background-color: rgba(245, 158, 11, 0.3);
+    padding: 2px;
+    border-radius: 2px;
+}
+
+/* User Profile */
+.profile-header {
+    background-color: var(--gray-100);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.loan-item {
+    transition: all 0.2s ease;
+}
+
+.loan-item:hover {
+    background-color: var(--gray-100);
+}
+
+.loan-overdue {
+    border-left: 4px solid var(--danger);
+}
+
+.loan-active {
+    border-left: 4px solid var(--primary);
+}
+
+.loan-returned {
+    border-left: 4px solid var(--success);
+}
+
+/* Badges and Status Indicators */
+.badge.bg-success {
+    background-color: var(--success) !important;
+}
+
+.badge.bg-danger {
+    background-color: var(--danger) !important;
+}
+
+.badge.bg-warning {
+    background-color: var(--warning) !important;
+}
+
+.badge.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.badge.bg-secondary {
+    background-color: var(--secondary) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .book-cover-container {
+        height: 180px;
+    }
+    
+    .jumbotron {
+        padding: 2rem !important;
+    }
+    
+    .jumbotron .container-fluid {
+        padding: 1rem !important;
+    }
+}
+
+/* Dashboard stats */
+.stat-card {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Search Form */
+.search-form {
+    position: relative;
+}
+
+.search-form .form-control {
+    padding-right: 3rem;
+    border-radius: 2rem;
+}
+
+.search-form .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 2rem 2rem 0;
+    height: 100%;
+}
